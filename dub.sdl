@@ -1,0 +1,10 @@
+name "ctDispatchTable"
+description "A compile-time dispatch table in dlang."
+authors "Alexander Leisser"
+copyright "Copyright © 2019, Alexander Leisser"
+license "GPLv3"
+buildType "docs" {
+	buildOptions "syntaxOnly"
+    dflags "-c" "-Dddocs" "-preview=markdown"
+}
+
