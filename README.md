@@ -3,6 +3,8 @@
 [Wikiquote](https://en.wiktionary.org/wiki/dispatch_table)
 > A table of pointers to functions or methods, commonly used to implement dynamic binding. 
 
+Tested with dmd (2.085.1) and ldc2 (1.17.0)
+
 A simple dispatch table example: 
 ```D
     string fnDef (string s) { return s; }
@@ -20,7 +22,9 @@ A simple dispatch table example:
     assert (dispatch("a")("passed") == "passed");
 ```
 
-Usage:
+## Usage:
+
+The same dispatch table as above
 ```D
     import std.meta;
     alias list = AliasSeq!("a", fnA, "b", fnB);
